@@ -258,11 +258,3 @@ a.resumeBtn:hover {
 .secondIcon {
   animation: rotateClockwise 20s linear infinite;
 }
-
-@media screen and (max-width: 600px)
- {
-  h1{
-    font-size: 36px;
-    line-height: 50px;
-  }
-}
