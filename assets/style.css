@@ -1,0 +1,260 @@
+:root {
+  --black: #222831;
+  --grey: #393e46;
+  --teal: #00adb5;
+  --white: #eeeeee;
+}
+
+/* Google Fonts */
+.barlow-thin {
+  font-family: "Barlow", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.barlow-extralight {
+  font-family: "Barlow", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.barlow-light {
+  font-family: "Barlow", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.barlow-regular {
+  font-family: "Barlow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.barlow-medium {
+  font-family: "Barlow", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.barlow-semibold {
+  font-family: "Barlow", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.barlow-bold {
+  font-family: "Barlow", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.barlow-extrabold {
+  font-family: "Barlow", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.barlow-black {
+  font-family: "Barlow", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.barlow-thin-italic {
+  font-family: "Barlow", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.barlow-extralight-italic {
+  font-family: "Barlow", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.barlow-light-italic {
+  font-family: "Barlow", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.barlow-regular-italic {
+  font-family: "Barlow", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.barlow-medium-italic {
+  font-family: "Barlow", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.barlow-semibold-italic {
+  font-family: "Barlow", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.barlow-bold-italic {
+  font-family: "Barlow", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.barlow-extrabold-italic {
+  font-family: "Barlow", serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.barlow-black-italic {
+  font-family: "Barlow", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Global Css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--black);
+  font-family: "Barlow", serif;
+  background-image: url(./images/dotsBG.svg);
+  position: relative;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+svg.firstIcon {
+  position: absolute;
+  top: 7rem;
+  right: 8rem;
+}
+
+svg.secondIcon {
+  position: absolute;
+  bottom: 7rem;
+  left: 8rem;
+}
+
+.avatar {
+  width: 224px;
+  height: 224px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+  object-position: center;
+}
+
+.hero-section .parent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100vh;
+}
+
+.hero-section h1 {
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--white);
+  padding: unset;
+  margin: unset;
+  font-weight: 900;
+}
+
+.hero-section p {
+  color: var(--white);
+  font-size: 2.3rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.hero-section p > br {
+  display: none;
+}
+
+a.resumeBtn {
+  color: var(--grey);
+  background-color: var(--teal);
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s; /* Basic transitions for non-hover states */
+}
+
+/* Use keyframes for hover effect */
+a.resumeBtn:hover {
+  animation: hoverEffect 0.3s forwards; /* Trigger the keyframe animation */
+}
+
+/* Define the hover keyframes */
+@keyframes hoverEffect {
+  0% {
+    background-color: var(--teal);
+    color: var(--grey);
+    box-shadow: none;
+    border: none;
+  }
+  100% {
+    background-color: var(--grey);
+    color: var(--white);
+    box-shadow: 4px 4px var(--teal);
+    border: 1px dashed var(--teal);
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-section h1 {
+    font-size: 5rem;
+    font-weight: 800;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+
+  .hero-section p > br {
+    display: block;
+  }
+}
+
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCounterClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.firstIcon {
+  animation: rotateCounterClockwise 20s linear infinite;
+}
+
+.secondIcon {
+  animation: rotateClockwise 20s linear infinite;
+}
